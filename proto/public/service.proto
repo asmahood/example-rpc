@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service HatService {
+  rpc NewHat(NewHatRequest) returns (Hat);
+}
+
+message Hat {
+  string type = 1;
+  string colour = 2;
+}
+
+message NewHatRequest {
+  string colour = 1;
+}

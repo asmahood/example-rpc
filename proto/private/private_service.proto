@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service PrivateHatService {
+  rpc NewTopHat(NewTopHatRequest) returns (TopHat);
+}
+
+message TopHat {
+  string colour = 1;
+  int32 height = 2;
+}
+
+message NewTopHatRequest {
+  string colour = 1;
+}
